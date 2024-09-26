@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+    <div class="w-[60%] lg:w-[70%] m-auto ">
+
+    <nav class="bg-white  w-[90%] lg:w-[70%] m-auto  m-auto fixed left-0 top-0 h-[90px] right-0 flex justify-between items-center text-black">
+        <div class="flex gap-[4px] items-center "><h1 class="text- font-bold hidden md:block cursor-pointer toHomePage1"> My-E commerse WEB</h1> <i  class="bi bi-apple  text-2xl" ></i></div>
+        <div id="CheckoutItems">Checkout (3 items)</div>
+        <div><i  class="bi bi-apple  text-2xl" ></i></div>
+     </nav>
+     <div class="mt-[90px] w-full">
+         <div  class="w-full flex   lg:flex-row justify-center flex-col lg:justify-between  gap-[30px]">
+           <div class="lg:w-[60%] w-full " id="displayCart">
+            <div class="shadow-lg  border border-gray-300  border-[1px] rounded-lg overflow-hidden p-[20px] m-[10px] w">
+              <h2 class="pb-[30px]">Delivery date: Saturday, September 28</h2>
+              <div>
+                  <div class=" flex gap-[20px] items-start">
+                       <div class="w-[80px]">
+                         <img class="w-full" src="./images/adults-plain-cotton-tshirt-2-pack-teal.jpg" alt="">
+                       </div>
+                       <div>
+                           <p>6 Piece White Dinner Plate Set</p>
+                           <p>$20.67</p>
+                           <div class="flex items-center gap-[10px]"><p>Quantity: 1</p> <button>Update</button> <button class="hover:text-red-600">Delete</button></div>
+                       </div>
+                  </div>
+                <div>
+                      
+                </div>
+              </div>
+            </div>
+            
+           </div>
+           
+           <div class="  p-[20px] bg-white border border border-gray-300  shadow-lg h-[330px] lg:w-[40%] w-full">
+                <h1>Order Summary</h1>
+                <div>
+                  <div class="flex justify-between items-center font-bold text-gl p-[5px]" id="totalItem"></div>
+                  <!-- <div  class="flex justify-between items-center font-bold text-gl p-[5px]"><p>Shipping & handling:</p><p>$0.00</p></div> -->
+                  <div  class="flex justify-between items-center font-bold text-gl p-[5px]" id="priceBefTask"></div>
+                  <div  class="flex justify-between items-center font-bold text-gl p-[5px]" id="priceAftTask"></div>
+                  <div  class="flex justify-between items-center font-bold text-gl p-[5px]" id="finalAmount"></div>
+                  <button class="p-[10px] m-[5px] text-white rounded-lg w-full bg-yellow-800 " onclick="checkPrice()">place your order</button>
+
+                  
+                </div>
+           </div>
+         </div>
+        </div>
+      </div>
+      <p class="font-bold text-red text-2xl"></p>
+      <script src="./index.js"></script>
+      
+</body>
+</html>
