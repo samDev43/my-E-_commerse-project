@@ -366,7 +366,7 @@ countProduct()
 
  
 moveToCartDisplay=()=>{
-    window.location.href = 'https://samDev43.github.io/CheckoOut/cart.html';
+    window.location.href = 'https://samdev43.github.io/my-E-_commerse-project/cart.html';
 
 }
 
