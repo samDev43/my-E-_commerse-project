@@ -336,7 +336,7 @@ displayProduct()
 function showProduckCount(){}
 
 function addToCart(i) {
-    // console.log(document.querySelector(`select[name="productCount-${i}"]`));
+    console.log(document.querySelector(`select[name="productCount-${i}"]`));
     const selectedCount = document.querySelector(`select[name="productCount-${i}"]`).value;
     
     
