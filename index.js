@@ -366,7 +366,7 @@ countProduct()
 
  
 moveToCartDisplay=()=>{
-    window.location.href='/cart.html'
+    window.location.href='http://github/cart.html'
 }
 
 
@@ -417,7 +417,7 @@ delFunc=(i)=>{
 }
 if(document.querySelector('.toHomePage1')){
     document.querySelector('.toHomePage1').addEventListener('click', ()=>{
-        window.location.href= 'http://github/index.html'
+        window.location.href= 'http://127.0.0.1:5500/index.html'
     })
 }
 
