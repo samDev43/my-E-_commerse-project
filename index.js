@@ -366,7 +366,8 @@ countProduct()
 
  
 moveToCartDisplay=()=>{
-    window.location.href = 'https://samdev43.github.io/my-E-_commerse-project/cart.html';
+    // window.location.href = 'https://samdev43.github.io/my-E-_commerse-project/cart.html';
+    window.location.href = 'http://127.0.0.1:5500/cart.html'
 
 }
 
@@ -422,7 +423,8 @@ delFunc=(i)=>{
 }
 if(document.querySelector('.toHomePage1')){
     document.querySelector('.toHomePage1').addEventListener('click', ()=>{
-        window.location.href= 'http://samdev43.github.io/my-E-_commerse-project/index.html'
+        // window.location.href= 'http://samdev43.github.io/my-E-_commerse-project/index.html'
+        window.location.href= 'http://127.0.0.1:5500/index.html'
     })
 }
 
@@ -503,7 +505,7 @@ if( document.getElementById('product-detail')){
       </div>description
 
       <!-- Add to Cart Button -->
-      <button onclick="addToCart(${product.id-1})"
+      <button onclick="addToCartt(${product.id-1})"
          class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
          Add to Cart
       </button>
@@ -516,7 +518,7 @@ if( document.getElementById('product-detail')){
 
 displayCheckOutProduct()
 
-function addToCart(Number){
+function addToCartt(Number){
   let chosenProduct = productList[Number]
   console.log( chosenProduct.id);
   let matchingProduct= custumerProductChose.find(matchingProductObject=> matchingProductObject.imageURL === chosenProduct.imageURL)
