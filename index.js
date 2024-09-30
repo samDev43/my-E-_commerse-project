@@ -309,8 +309,8 @@ function displayProduct(){
         display_products.innerHTML +=  `
         <div class="border  border-gray-300 border-1 p-[10px] rounded flex flex-col justify-between">
         <div>
-          <div class="h-[17rem]"> <img class="w-full h-full" src="${product.imageURL}" alt=""></div>
-          <p class="font-bold my-[7px]">${product.description}</p>
+          <div class="h-[17rem]" onclick="viewProductIfo(${i})"> <img class="w-full h-full" src="${product.imageURL}" alt=""></div>
+          <p class="font-bold my-[7px]">${product.productName}</p>
        <p class="font-bold"> prise: $${product.productPrice}</p>
           <select class="m-[5px] p-[3px] rounded-lg productCount " name="productCount-${i}" id="">
               <option value="1">1</option>
@@ -372,6 +372,7 @@ moveToCartDisplay=()=>{
 
 
 function displayCartFunc(){
+  if(document.getElementById('displayCart')){
     let displayCart= document.getElementById('displayCart')
     displayCart.innerHTML = '';
     custumerProductChose.forEach((cartProduct, i)=>{
@@ -404,6 +405,8 @@ function displayCartFunc(){
           checkPrice()
         })
     
+  }
+    
 }
 
 
@@ -419,7 +422,7 @@ delFunc=(i)=>{
 }
 if(document.querySelector('.toHomePage1')){
     document.querySelector('.toHomePage1').addEventListener('click', ()=>{
-        window.location.href= 'http://127.0.0.1:5500/index.html'
+        window.location.href= 'http://samdev43.github.io/my-E-_commerse-project/index.html'
     })
 }
 
@@ -436,6 +439,7 @@ function countProduct(){
 }
 
 function checkPrice(){
+ if( document.getElementById('totalItem')){
   cost=0
   console.log(custumerProductChose);
   console.log();
@@ -451,6 +455,85 @@ function checkPrice(){
   document.getElementById('priceBefTask').innerHTML=`<p>Total before tax:</p><p>$${cost}</p>`
   document.getElementById('priceAftTask').innerHTML=`<p>Estimated tax (10%):</p><p>$${(cost*10)/100}</p>`
   document.getElementById('finalAmount').innerHTML=`<p>Order total:</p><p>$${taxtCost}</p>`
+ }
 }
 
 checkPrice()
+
+function viewProductIfo(i){
+  console.log(i);
+   console.log(productList[i]);
+   localStorage.setItem('checkOutProduct', JSON.stringify(productList[i]))
+   location.href = `http://samdev43.github.io/my-E-_commerse-project/prduct_discription%20.html`
+  
+}
+
+
+function displayCheckOutProduct(){
+  let product = JSON.parse(localStorage.getItem('checkOutProduct'))
+if( document.getElementById('product-detail')){
+
+  document.getElementById('product-detail').innerHTML = `
+   <div class="p-6 bg-white rounded-lg shadow-lg max-w-lg mx-auto">
+      <!-- Product Name -->
+      <h1 class="text-2xl font-bold text-gray-800 mb-4">${product.productName}</h1>
+
+      <!-- Product Image -->
+      <div class="flex justify-center mb-4">
+         <img class="w-64 h-64 object-cover rounded-lg" src="${product.imageURL}" alt="${product.productName}">
+      </div>
+
+      <!-- Product Description -->
+      <p class="text-gray-600 mb-4">${product.description}</p>
+
+      <!-- Product Price and Availability -->
+      <div class="flex justify-between items-center mb-4">
+         <p class="text-lg font-semibold text-gray-800">Price: $${product.productPrice}</p>
+         <p class="text-sm text-gray-500">Available: ${product.quantityAvailable}</p>
+      </div>
+
+      <!-- Key Ingredients -->
+      <div class="mb-6">
+         <h3 class="text-xl font-bold text-gray-800 mb-2">Key Ingredients:</h3>
+         <ul class="list-disc list-inside text-gray-700 space-y-1">
+            ${product.keyIngredients.map(ingredient => 
+               `<li class="pl-2">${ingredient.name}: ${ingredient.description}</li>`
+            ).join('')}
+         </ul>
+      </div>description
+
+      <!-- Add to Cart Button -->
+      <button onclick="addToCart(${product.id-1})"
+         class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+         Add to Cart
+      </button>
+   </div>
+`;
+}
+
+      console.log(product.id-1);
+}
+
+displayCheckOutProduct()
+
+function addToCart(Number){
+  let chosenProduct = productList[Number]
+  console.log( chosenProduct.id);
+  let matchingProduct= custumerProductChose.find(matchingProductObject=> matchingProductObject.imageURL === chosenProduct.imageURL)
+  if(matchingProduct){
+      matchingProduct.quantity += 1;
+      // console.log(matchingProduct.quantity)
+      saveCustumerProductChose()
+
+  }else{
+      chosenProduct.quantity = 1;
+      chosenProduct.cartId = `cart-${Number}`;
+      chosenProduct.chosenProductImg = chosenProduct.imageURL
+      custumerProductChose.push(chosenProduct);
+      console.log(chosenProduct.quantity);
+      saveCustumerProductChose()
+
+  }
+  countProduct()
+  location.href= `http://samdev43.github.io/my-E-_commerse-project/index.html`
+}
