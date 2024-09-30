@@ -464,7 +464,7 @@ function viewProductIfo(i){
   console.log(i);
    console.log(productList[i]);
    localStorage.setItem('checkOutProduct', JSON.stringify(productList[i]))
-   location.href = `http://samdev43.github.io/my-E-_commerse-project/prduct_discription%20.html`
+   location.href = `http://samdev43.github.io/my-E-_commerse-project/prduct_discription.html`
   
 }
 
