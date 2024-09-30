@@ -366,8 +366,8 @@ countProduct()
 
  
 moveToCartDisplay=()=>{
-    // window.location.href = 'https://samdev43.github.io/my-E-_commerse-project/cart.html';
-    window.location.href = 'http://127.0.0.1:5500/cart.html'
+    window.location.href = 'https://samdev43.github.io/my-E-_commerse-project/cart.html';
+    // window.location.href = 'http://127.0.0.1:5500/cart.html'
 
 }
 
@@ -423,8 +423,8 @@ delFunc=(i)=>{
 }
 if(document.querySelector('.toHomePage1')){
     document.querySelector('.toHomePage1').addEventListener('click', ()=>{
-        // window.location.href= 'http://samdev43.github.io/my-E-_commerse-project/index.html'
-        window.location.href= 'http://127.0.0.1:5500/index.html'
+        window.location.href= 'http://samdev43.github.io/my-E-_commerse-project/index.html'
+        // window.location.href= 'http://127.0.0.1:5500/index.html'
     })
 }
 
