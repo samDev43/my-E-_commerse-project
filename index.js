@@ -376,6 +376,7 @@ function displayCartFunc(){
     displayCart.innerHTML = '';
     custumerProductChose.forEach((cartProduct, i)=>{
         let {id, productName, productPrice, quantityAvailable, imageURL, subImages, scents, keyIngredients} = cartProduct;
+        // console.log(subImages);
         let [wer] = scents
         let [mmm, yoy] = keyIngredients
         let {name, description} = mmm
@@ -388,9 +389,9 @@ function displayCartFunc(){
                      <img src="${imageURL}" alt="">
                    </div>
                    <div>
-                       <p class="font-bold ">${description}</p>
+                       <p class="font-bold sm:text-sm">${description}</p>
                        <p>$${productPrice}</p>
-                       <div class="flex items-center gap-[10px]"><p>Quantity: ${cartProduct.quantity}</p> <button>Update</button> <button  class=" hover:text-red-600 " onclick=" delFunc(${i})">Delete</button></div>
+                       <div class="flex items-center sm:text-sm  gap-[10px]"><p>Quantity: ${cartProduct.quantity}</p> <button>Update</button> <button  class=" hover:text-red-600 " onclick=" delFunc(${i})">Delete</button></div>
                    </div>
               </div>
             <div>
