@@ -325,7 +325,7 @@ function displayProduct(){
               <option value="10">10</option>
           </select>
         </div>
-           <div><button   onclick="addToCart(${i})" class="my-[30px] w-full m-auto bg-yellow-600 rounded-lg py-[5px] text-white addToCartBtns">add to cart</button></div>
+           <div><button   onclick="addToCart(${i})" class="my-[30px] w-full m-auto bg-yellow-500 hover:bg-yellow-600 rounded-lg py-[5px] text-white addToCartBtns">add to cart</button></div>
        </div>
         `
     })
