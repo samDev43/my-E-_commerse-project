@@ -600,8 +600,8 @@ countProduct()
 
  
 moveToCartDisplay=()=>{
-    // window.location.href = 'https://samdev43.github.io/my-E-_commerse-project/cart.html';
-    window.location.href = 'http://127.0.0.1:5500/cart.html'
+    window.location.href = 'https://samdev43.github.io/my-E-_commerse-project/cart.html';
+    // window.location.href = 'http://127.0.0.1:5500/cart.html'
 
 }
 
@@ -720,8 +720,8 @@ function decreaseQuantityFunc(index){
 }
 if(document.querySelector('.toHomePage1')){
     document.querySelector('.toHomePage1').addEventListener('click', ()=>{
-        // window.location.href= 'http://samdev43.github.io/my-E-_commerse-project/index.html'
-        window.location.href= 'http://127.0.0.1:5500/index.html'
+        window.location.href= 'http://samdev43.github.io/my-E-_commerse-project/index.html'
+        // window.location.href= 'http://127.0.0.1:5500/index.html'
     })
 }
 
@@ -767,8 +767,8 @@ function viewProductIfoElectronics(i){
   console.log(i);
    console.log(dataElectronics);
    localStorage.setItem('checkOutProduct', JSON.stringify(dataElectronics[i]))
-  //  location.href = `http://samdev43.github.io/my-E-_commerse-project/prduct_discription.html`              
-   location.href=`http://127.0.0.1:5500/prduct_discription.html`
+   location.href = `http://samdev43.github.io/my-E-_commerse-project/prduct_discription.html`              
+  //  location.href=`http://127.0.0.1:5500/prduct_discription.html`
   
 }
 
@@ -777,8 +777,8 @@ function viewProductIfoJewelery(i){
   console.log(i);
    console.log(dataJewelry);
    localStorage.setItem('checkOutProduct', JSON.stringify(dataJewelry[i]))
-  //  location.href = `http://samdev43.github.io/my-E-_commerse-project/prduct_discription.html`              
-   location.href=`http://127.0.0.1:5500/prduct_discription.html`
+   location.href = `http://samdev43.github.io/my-E-_commerse-project/prduct_discription.html`              
+  //  location.href=`http://127.0.0.1:5500/prduct_discription.html`
   
 }
 
@@ -786,8 +786,8 @@ function viewProductIfoMenCloth(i){
   // moreProductMenCloth()
    console.log(dataMenCloth);
    localStorage.setItem('checkOutProduct', JSON.stringify(dataMenCloth[i]))
-  //  location.href = `http://samdev43.github.io/my-E-_commerse-project/prduct_discription.html`              
-   location.href=`http://127.0.0.1:5500/prduct_discription.html`
+   location.href = `http://samdev43.github.io/my-E-_commerse-project/prduct_discription.html`              
+  //  location.href=`http://127.0.0.1:5500/prduct_discription.html`
   
 }
 
@@ -918,21 +918,21 @@ function addToCartt(){
     countProduct() 
   }
     saveCustumerProductChose();
-  // location.href= `http://samdev43.github.io/my-E-_commerse-project/index.html`
-  location.href=`http://127.0.0.1:5500/index.html`
+  location.href= `http://samdev43.github.io/my-E-_commerse-project/index.html`
+  // location.href=`http://127.0.0.1:5500/index.html`
   
    }
 
    if(document.getElementById('toHomePage2')){
 
    toHomePage2.addEventListener('click', (()=>{
-    // location.href = `http://samdev43.github.io/my-E-_commerse-project/index.html`
-    location.href = `http://127.0.0.1:5500/index.html`
+    location.href = `http://samdev43.github.io/my-E-_commerse-project/index.html`
+    // location.href = `http://127.0.0.1:5500/index.html`
    }))
 
    toCartPage2.addEventListener('click', (()=>{
-    // location.href = `http://samdev43.github.io/my-E-_commerse-project/cart.html`
-    location.href = `http://127.0.0.1:5500/cart.html`
+    location.href = `http://samdev43.github.io/my-E-_commerse-project/cart.html`
+    // location.href = `http://127.0.0.1:5500/cart.html`
    }))
    }
 
