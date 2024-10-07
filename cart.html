@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
-<body>
+<body class="bg-slate-600">
     <div class="w-[95%] md:w-[60%] lg:w-[70%] m-auto ">
 
-    <nav class="bg-white  w-[97%] lg:w-[70%]  m-auto fixed left-0 top-0 h-[90px] right-0 flex justify-between items-center text-black ">
-        <div class="flex gap-[4px] items-center toHomePage1 cursor-pointer "><h1 class="text- font-bold hidden md:block "> My-E commerse WEB</h1> <i  class="bi bi-apple  text-2xl" ></i></div>
-        <div id="CheckoutItems">Checkout (3 items)</div>
-        <div><i  class="bi bi-apple  text-2xl" ></i></div>
+      <nav class="bg-sky-400 shadow-lg w-full  fixed left-0 top-0  right-0  text-black ">
+        <div class="  w-[97%] lg:w-[70%] flex justify-between items-center m-auto h-[90px]">
+          <div class="flex gap-[4px] items-center toHomePage1 cursor-pointer "><h1 class="text- font-bold hidden md:block "> My-E commerse WEB</h1> <i  class="bi bi-apple  text-2xl" ></i></div>
+          <div id="CheckoutItems">Checkout (3 items)</div>
+          <div><i  class="bi bi-apple  text-2xl" ></i></div>
+        </div>
      </nav>
-     <div class="mt-[90px] w-full">
+     <div class="mt-[100px] w-full">
          <div  class="w-full flex   lg:flex-row justify-center flex-col lg:justify-between  gap-[30px]">
            <div class="lg:w-[60%] w-full " id="displayCart">
             <div class="shadow-lg  border border-gray-300  border-[1px] rounded-lg overflow-hidden p-[20px] m-[10px] w">
@@ -28,7 +30,11 @@
                        <div>
                            <p>6 Piece White Dinner Plate Set</p>
                            <p>$20.67</p>
-                           <div class="flex items-center gap-[10px]"><p>Quantity: 1</p> <button>Update</button> <button class="hover:text-red-600">Delete</button></div>
+                           <div class="flex items-center gap-[10px]"><p>Quantity: 1</p> <button class="hover:text-green-600 " onclick="showUpdateBTN()">Update</button> <button class="hover:text-red-600">Delete</button></div>
+                           <div  id=""  class="flex items-center">
+                             <button class="p-2 shadow-lg w-[30%] bg-white rounded-lg text-black px-[10px]">-</button>
+                             <button class="p-2 shadow-lg w-[30%]">+</button>
+                         </div>
                        </div>
                   </div>
                 <div>
@@ -39,7 +45,7 @@
             
            </div>
            
-           <div class="  p-[20px] bg-white border border border-gray-300  shadow-lg h-[330px] lg:w-[40%] w-full">
+           <div class="bg-orange-300  p-[20px] border border border-gray-300  shadow-lg h-[330px] lg:w-[40%] w-full">
                 <h1>Order Summary</h1>
                 <div>
                   <div class="flex justify-between items-center font-bold text-gl p-[5px]" id="totalItem"></div>
@@ -55,7 +61,7 @@
          </div>
         </div>
       </div>
-      <p class="font-bold text-red text-2xl"></p>
+      <p class=" font-bold text-red text-2xl"></p>
       <script src="./index.js"></script>
       
 </body>

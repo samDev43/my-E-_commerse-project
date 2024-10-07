@@ -5,19 +5,20 @@
     <title>MY E-commerse project</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
-<body>
-    <div>
-        <nav class="w-full bg-black fixed top-0 right-0 left-0 h-[60px]">
+<body class="bg-gray-700">
+    <div >
+        <nav class="w-full bg-black fixed top-0 right-0 left-0 h-[60px] z-index-50 index-50">
             <div class="flex justify-between items-center ">
                 <div class="cursor-pointer flex items-center gap-[10px] p-[7px] m-[10px] md:mr-[40] lg:mr-[130px] border-white  hover:border p-[1px]">
-                    <h1 class="text-white font-bold hidden md:block"> My-E commerse WEB</h1> <i  class="bi bi-apple text-white text-2xl" ></i>
+                    <h1 class="text-white font-bold hidden md:block"> My-E commerce WEB</h1> <i  class="bi bi-apple text-white text-2xl" ></i>
                </div>
                <div class="text-white flex items-center gap-[8px] flex-1 bg-white pl-[10px] overflow-hidden rounded-lg">
-                    <div class="w-full flex h-[30px] md:h-[40px]">
-                        <input class="text-black text-lg flex-1 border-none outline-none bg-transparent" type="text" placeholder="Search...">
+                    <div class="w-full flex h-[20px] md:h-[20px]">
+                        <input class="text-black text-lg flex-1 border-none outline-none bg-transparent" id="searchINP"  type="text" placeholder="Search...">
                     </div>
-                    <div class="text-black text-xl cursor-pointer md:bg-yellow-600 w-[40px] pr-[5px] h-[40px] flex text-center items-center justify-center overflow-hidden " ><i class="bi bi-zoom-out"></i></div>
+                    <div class="text-black text-xl cursor-pointer md:bg-yellow-600 w-[40px] pr-[5px] h-[30px] flex text-center items-center justify-center overflow-hidden " ><i class="bi bi-zoom-out"></i></div>
                 </div>
                <button onclick="moveToCartDisplay()" class="ml-[] text-white p-[7px] w-[70px] relative flex items-end h-[50px] justify-center">
                    <div class="relative">
@@ -29,14 +30,33 @@
             </div>
         </nav>
     <p class=""></p>
-        <div id="display_products" class="mt-[70px] m-auto w-[95%] grid md:grid-cols-3 lg:grid-cols-6">
-          
-        </div>
+   <div class="mt-[70px] w-[95%] m-auto">
+    <h1 class=" text-white text-2xl font-bold py-[20px] productHeading">Electonics products</h1>
+    <div id="display_productsElectonics" class=" gap-2 m-auto w-[100%] grid md:grid-cols-3 lg:grid-cols-6">
         
-        
-        <!-- <div class="w-[10000px] h-[1000px] bg-black md:bg-yellow-600 lg:bg-orange-700">wertyuio</div> -->
     </div>
+    <h1 class="text-white text-2xl font-bold py-[20px] productHeading">Men's cloth</h1>
+    <div id="display_productMenCloth" class="mt-[] gap-2 m-auto w-[100%] grid md:grid-cols-3 lg:grid-cols-6">
+        
+    </div>
+    <h1 class="text-white text-2xl font-bold py-[20px] productHeading">Jewelery </h1>
+    <div id="display_productsJewelery" class="mt-[] gap-2 m-auto w-[100%] grid md:grid-cols-3 lg:grid-cols-6">
+        
+    </div>
+    <!-- <div class="w-[10000px] h-[1000px] bg-black md:bg-yellow-600 lg:bg-orange-700">wertyuio</div> -->
+</div>
+</div>
+<div id="snackbar">Some text some message..</div>
+<div id="spinnerEl" class="flex justify-center h-[700px] items-center ">
+    <div class="text-red-600 inline-block h-[200px] w-[200px] animate-spin rounded-full border-4 border-solid border-current border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite] dark:text-white"
+        role="status">
+        <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+    >Loading...</span>
+</div>
+</div>
+
     <script src="./index.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js" integrity="sha512-zlWWyZq71UMApAjih4WkaRpikgY9Bz1oXIW5G0fED4vk14JjGlQ1UmkGM392jEULP8jbNMiwLWdM8Z87Hu88Fw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 </body>
 </html>
 
