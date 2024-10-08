@@ -970,7 +970,7 @@ document.getElementById('confirmRequest').addEventListener('click', (()=>{
   document.getElementById('feedBackPop').classList.add('hidden')
   document.getElementById('feedBackMessage').innerHTML =`
     
-  <h2 class="text-xl font-semibold text-gray-800 mb-4">Are you sure?</h2>
+  <h2 class="text-xl font-semibold text-gray-800 mb-4">Congratulation</h2>
   <p class="text-gray-600 mb-6">Congratulation you have successfully purchace this product </p>
   <p>you are charge $${taxtCost.toFixed(0)} for this product </p>
   `
