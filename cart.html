@@ -10,14 +10,14 @@
 <body class="bg-slate-600">
     <div class="w-[95%] md:w-[60%] lg:w-[70%] m-auto ">
 
-      <nav class="text-white bg-sky-400 shadow-lg w-full  fixed left-0 top-0  right-0  text-black ">
+      <nav class="text-white bg-sky-400 shadow-lg w-full  fixed left-0 top-0  right-0  text-black z-[20]">
         <div class="  w-[97%] lg:w-[70%] flex justify-between items-center m-auto h-[90px]">
           <div class="flex gap-[4px] items-center toHomePage1 cursor-pointer "><h1 class="text- font-bold hidden md:block "> My-E commerse WEB</h1> <i  class="bi bi-apple  text-2xl" ></i></div>
           <div id="CheckoutItems">Checkout (3 items)</div>
           <div><i  class="bi bi-apple  text-2xl" ></i></div>
         </div>
      </nav>
-     <div class="mt-[100px] w-full">
+     <div class="mt-[100px] w-full relative">
          <div  class="w-full flex   lg:flex-row justify-center flex-col lg:justify-between  gap-[30px]">
            <div class="lg:w-[60%] w-full " id="displayCart">
             <div class="shadow-lg  border border-gray-300  border-[1px] rounded-lg overflow-hidden p-[20px] m-[10px] w">
@@ -49,20 +49,56 @@
                 <h1>Order Summary</h1>
                 <div>
                   <div class="flex justify-between items-center font-bold text-gl p-[5px]" id="totalItem"></div>
-                  <!-- <div  class="flex justify-between items-center font-bold text-gl p-[5px]"><p>Shipping & handling:</p><p>$0.00</p></div> -->
                   <div  class="flex justify-between items-center font-bold text-gl p-[5px]" id="priceBefTask"></div>
                   <div  class="flex justify-between items-center font-bold text-gl p-[5px]" id="priceAftTask"></div>
                   <div  class="flex justify-between items-center font-bold text-gl p-[5px]" id="finalAmount"></div>
-                  <button class="p-[10px] m-[5px] text-white rounded-lg w-full bg-yellow-800 " onclick="checkPrice()">place your order</button>
+                  <button class="p-[10px] m-[5px] text-white rounded-lg w-full bg-yellow-800 " onclick="feedBackFunc()">place your order</button>
 
                   
                 </div>
            </div>
          </div>
         </div>
+
+        
+      </div>
+      <div id="feedBackPop" class="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
+          <button class="absolute top-2 right-2 text-gray-400 hover:text-gray-600 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+      
+          <h2 class="text-xl font-semibold text-gray-800 mb-4">Are you sure?</h2>
+          <p class="text-gray-600 mb-6">Do you want to continue with this action? </p>
+      
+          <div class="flex justify-end space-x-4">
+            <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 focus:outline-none" id="CancelRequest">Cancel</button>
+            <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none " id="confirmRequest">Confirm</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="ConfirmfeedBackPop" class="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
+
+          <button class="absolute top-2 right-2 text-gray-400 hover:text-gray-600 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        <div  id="feedBackMessage">
+
+        </div>
+          <div class="flex justify-end space-x-4">
+            <!-- <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 focus:outline-none" id="CancelRequest">Cancel</button>
+            <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none " id="confirmRequest">Confirm</button> -->
+          </div>
+        </div>
       </div>
       <p class=" font-bold text-red text-2xl"></p>
       <script src="./index.js"></script>
       
 </body>
-</html>
+</html

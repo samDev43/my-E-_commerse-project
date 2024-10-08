@@ -104,14 +104,14 @@
 //       ],
 //     },
 //     {
-//       id: 4,
-//       productName: "Shea Berry Melon",
-//       productPrice: 25.0,
+  //       id: 4,
+  //       productName: "Shea Berry Melon",
+  //       productPrice: 25.0,
 //       quantityAvailable: 90,
 //       imageURL:
 //         "https://productimages.hepsiburada.net/l/35/1000/10473224536114.jpg",
 //       subImages: [
-//         "https://productimages.hepsiburada.net/l/41/1000/10709642149938.jpg",
+  //         "https://productimages.hepsiburada.net/l/41/1000/10709642149938.jpg",
 //         "https://productimages.hepsiburada.net/l/41/1000/10709642149938.jpg",
 //       ],
 //       description:
@@ -154,12 +154,12 @@
 //           description: "Provides a cooling sensation and soothes irritated skin.",
 //         },
 //         {
-//           name: "Tea Tree Oil",
+  //           name: "Tea Tree Oil",
 //           description: "Fights acne and promotes clearer skin.",
 //         },
 //       ],
 //       benefitsAndUses: [
-//         {
+  //         {
 //           name: "Cooling Sensation",
 //           description:
 //             "Cools the skin and provides relief from irritation and inflammation.",
@@ -167,23 +167,23 @@
 //       ],
 //     },
 //     {
-//       id: 6,
+  //       id: 6,
 //       productName: "Rose Petal",
 //       productPrice: 28.0,
 //       quantityAvailable: 75,
 //       imageURL:
 //         "https://productimages.hepsiburada.net/l/42/600-800/10733441515570.jpg",
 //       subImages: [
-//         "https://productimages.hepsiburada.net/s/22/1500/9949777100850.jpg",
+  //         "https://productimages.hepsiburada.net/s/22/1500/9949777100850.jpg",
 //         "https://productimages.hepsiburada.net/s/38/1500/10583086202930.jpg",
 //       ],
 //       description:
 //         "Infused with rose petals and essential oils for luxurious hydration.",
 //       scents: ["Rose Petal", "Lavender", "Unleashed"],
 //       keyIngredients: [
-//         {
-//           name: "Rose Oil",
-//           description: "Softens skin and improves its texture.",
+  //         {
+    //           name: "Rose Oil",
+    //           description: "Softens skin and improves its texture.",
 //         },
 //         {
 //           name: "Grapeseed Oil",
@@ -191,9 +191,9 @@
 //         },
 //       ],
 //       benefitsAndUses: [
-//         {
-//           name: "Luxurious Hydration",
-//           description: "Leaves skin feeling soft, smooth, and nourished.",
+  //         {
+    //           name: "Luxurious Hydration",
+    //           description: "Leaves skin feeling soft, smooth, and nourished.",
 //         },
 //       ],
 //     },
@@ -212,11 +212,11 @@
 //       scents: ["Citrus Splash", "Summer Rain", "Coolmint"],
 //       keyIngredients: [
 //         {
-//           name: "Orange Oil",
-//           description: "Brightens skin and reduces blemishes.",
-//         },
-//         {
-//           name: "Lemon Oil",
+  //           name: "Orange Oil",
+  //           description: "Brightens skin and reduces blemishes.",
+  //         },
+  //         {
+    //           name: "Lemon Oil",
 //           description: "Energizes the skin and promotes a glowing complexion.",
 //         },
 //       ],
@@ -224,13 +224,13 @@
 //     }]
 
 // let products =[
-//     {
-//         image:'images/6-piece-white-dinner-plate-set.jpg',
-//         description:'',
+  //     {
+    //         image:'images/6-piece-white-dinner-plate-set.jpg',
+    //         description:'',
 //         price:''
 //       },
 //       {
-//         image:'images/adults-plain-cotton-tshirt-2-pack-teal.jpg',
+  //         image:'images/adults-plain-cotton-tshirt-2-pack-teal.jpg',
 //         description:'',
 //         price:''
 //     },
@@ -260,12 +260,12 @@
 //         price:''
 //     },
 //     {
-//         image:'images/countertop-blender-64-oz.jpg',
+  //         image:'images/countertop-blender-64-oz.jpg',
 //         description:'',
 //         price:''
 //       },
 //     {
-//       image:'images/double-elongated-twist-french-wire-earrings.webp',
+  //       image:'images/double-elongated-twist-french-wire-earrings.webp',
 //         description:'',
 //         price:''
 //       },
@@ -275,9 +275,9 @@
 //       price:''
 //     },
 //     {
-//       image:'images/men-chino-pants-beige.jpg',
-//       description:'',
-//       price:''
+  //       image:'images/men-chino-pants-beige.jpg',
+  //       description:'',
+  //       price:''
 //     },
 //     {
 //       image:'images/men-cozy-fleece-zip-up-hoodie-red.jpg',
@@ -291,7 +291,9 @@
   let dataJewelry = []
   let dataMenCloth = []
   
-let customerProductChose = JSON.parse(localStorage.getItem('customerProductChose')) || [];
+  let customerProductChose = JSON.parse(localStorage.getItem('customerProductChose')) || [];
+  let cost = 0;
+  let taxtCost = 0;
 // customerProductChose = [];
 // saveCustumerProductChose()
 
@@ -304,28 +306,28 @@ let display_productsNumber = 0;
 // console.log(document.getElementById('display_products'))
 
 // function displayProduct(display){
-
+  
 //   let display_products = document.getElementById('display_products')
 //    if( document.getElementById('display_products')){
 //     display_products.innerHTML = '';
 //     console.log(display.length > 0);
 //     if(display.length > 0){
 //       display.forEach((product, i)=>{
-//           display_products.innerHTML +=  `
-//           <div class="border bg-white border-gray-300 border-1 p-[10px] rounded flex flex-col justify-between">
-//           <div>
-//             <div class="h-[17rem]" onclick="viewProductIfo(${i})"> <img class="w-full h-full" src="${product.imageURL}" alt=""></div>
-//             <p class="font-bold my-[7px]">${product.productName}</p>
-//          <p class="font-bold"> prise: $${product.productPrice}</p>
-//             <select class="m-[5px] p-[3px] rounded-lg productCount " name="productCount-${i}" id="">
-//                 <option value="1">1</option>
-//                 <option value="2">2</option>
-//                 <option value="3">3</option>
-//                 <option value="4">4</option>
-//                 <option value="5">5</option>
-//                 <option value="6">6</option>
-//                 <option value="7">7</option>
-//                 <option value="8">8</option>
+  //           display_products.innerHTML +=  `
+  //           <div class="border bg-white border-gray-300 border-1 p-[10px] rounded flex flex-col justify-between">
+  //           <div>
+  //             <div class="h-[17rem]" onclick="viewProductIfo(${i})"> <img class="w-full h-full" src="${product.imageURL}" alt=""></div>
+  //             <p class="font-bold my-[7px]">${product.productName}</p>
+  //          <p class="font-bold"> prise: $${product.productPrice}</p>
+  //             <select class="m-[5px] p-[3px] rounded-lg productCount " name="productCount-${i}" id="">
+  //                 <option value="1">1</option>
+  //                 <option value="2">2</option>
+  //                 <option value="3">3</option>
+  //                 <option value="4">4</option>
+  //                 <option value="5">5</option>
+  //                 <option value="6">6</option>
+  //                 <option value="7">7</option>
+  //                 <option value="8">8</option>
 //                 <option value="9">9</option>
 //                 <option value="10">10</option>
 //             </select>
@@ -636,8 +638,6 @@ function displayCartFunc(){
     displayCart.innerHTML = '';
     // customerProductChose = [];
     if(customerProductChose.length > 0){
-      
-      console.log(customerProductChose);
       customerProductChose.forEach((cartProduct, i)=>{
           let {id, productName, price, description, image, title, scents, keyIngredients} = cartProduct;
           // console.log(subImages)
@@ -655,8 +655,8 @@ function displayCartFunc(){
                           onclick="showUpdateBTN(${i})">Update</button> <button  class=" hover:text-red-600 " onclick=" delFunc(${i})">Delete</button>
                            <button id="removeIncANDecBTN_${i}" onclick="removeIncANDecBTNFUNC(${i})" class="hidden">Done</button></div>
                          <div  id="UpdateBTN_${i}"  class="hidden flex items-center mt-[20px]">
-                               <button class="p-2 shadow-lg  w-[30%] bg-white rounded-lg  text-black mx-[10px]" onclick="decreaseQuantityFunc(${i})">-</button>
-                               <button class="p-2 shadow-lg  w-[30%] bg-white rounded-lg  text-black mx-[10px]" onclick="increaseQuantityFunc(${i})">+</button>
+                               <button class="p-2 shadow-lg  transition duration-1000  hover:bg-gray-500 hover:text-white w-[30%] bg-white rounded-lg  text-black mx-[10px]" onclick="decreaseQuantityFunc(${i})">-</button>
+                               <button class="p-2 shadow-lg transition duration-1000  hover:bg-gray-500 hover:text-white w-[30%] bg-white rounded-lg  text-black mx-[10px]" onclick="increaseQuantityFunc(${i})">+</button>
                            </div>
                      </div>
                 </div>
@@ -708,7 +708,6 @@ if(document.getElementById('searchINP')){
 function showUpdateBTN(index){
   let updateBtn = document.getElementById(`UpdateBTN_${index}`);
   document.getElementById(`removeIncANDecBTN_${index}`).classList.toggle('hidden');
-  console.log(updateBtn);
   if (updateBtn) {
     updateBtn.classList.toggle('hidden'); 
   }
@@ -721,21 +720,17 @@ function removeIncANDecBTNFUNC(index){
 
 function increaseQuantityFunc(index){
   customerProductChose[index].quantity+=1
-  console.log(customerProductChose[index].quantity);
   document.getElementById(`quantity_${index}`).innerHTML =`quantity: ${customerProductChose[index].quantity}`
   countProduct()
   checkPrice()
-  console.log(customerProductChose);
+
   saveCustumerProductChose();
 }
 
 function decreaseQuantityFunc(index){
-  console.log(!customerProductChose[index].quantity >= 1, customerProductChose[index].quantity);
   if(customerProductChose[index].quantity > 1){
     customerProductChose[index].quantity-=1
-    console.log(customerProductChose[index].quantity);
      document.getElementById(`quantity_${index}`).innerHTML =`quantity: ${customerProductChose[index].quantity}`
-     console.log(customerProductChose);
      checkPrice()
      countProduct()
      
@@ -766,25 +761,26 @@ function countProduct(){
   // console.log(document.querySelector('.display_productsnumb').innerHTML);
 }
 
-function checkPrice(){
- if( document.getElementById('totalItem')){
-  let cost=0
-  let taxtCost = 0
-  customerProductChose.forEach((customerProductChoseo)=>{
-    cost+=customerProductChoseo.price*customerProductChoseo.quantity
-    console.log(cost);
-     taxtCost=cost + (cost*10)/100
-  })
-  document.getElementById('totalItem').innerHTML=`<p>items(${customerProductChose.length }):</p><p>$${(cost).toFixed(2)}</p>`
-  document.getElementById('priceBefTask').innerHTML=`<p>Total before tax:</p><p>$${(cost).toFixed(2)}</p>`
-  document.getElementById('priceAftTask').innerHTML=`<p>Estimated tax (10%):</p><p>$${((cost*10)/100).toFixed(2)}</p>`
-  document.getElementById('finalAmount').innerHTML=`<p>Order total:</p><p>$${(taxtCost).toFixed(2)}</p>`
-  
-  // console.log(cost);
-}
+function checkPrice() {
+  if (document.getElementById('totalItem')) {
+    // Reset cost and taxtCost
+    cost = 0;
+    taxtCost = 0;
+
+    customerProductChose.forEach((customerProductChoseo) => {
+      cost += customerProductChoseo.price * customerProductChoseo.quantity;
+    });
+
+    taxtCost = cost + (cost * 10) / 100;
+
+    document.getElementById('totalItem').innerHTML = `<p>items(${customerProductChose.length}):</p><p>$${cost.toFixed(2)}</p>`;
+    document.getElementById('priceBefTask').innerHTML = `<p>Total before tax:</p><p>$${cost.toFixed(2)}</p>`;
+    document.getElementById('priceAftTask').innerHTML = `<p>Estimated tax (10%):</p><p>$${((cost * 10) / 100).toFixed(2)}</p>`;
+    document.getElementById('finalAmount').innerHTML = `<p>Order total:</p><p>$${taxtCost.toFixed(2)}</p>`;
+  }
 }
 
-checkPrice()
+checkPrice();
 
 function viewProductIfoElectronics(i){
   // moreProductElectronics()
@@ -845,8 +841,8 @@ if( document.getElementById('product-detail')){
    description
    <div id="addToCarttUpdateEl" class="hidden flex items-center gap-[20px] my-[20px]">
       <div class="flex gap-[4px]"> quantity:<p id="updateQuality">1</p></div>
-      <button  class=" p-2 shadow-lg  w-[30%] bg-white rounded-lg  text-black mx-[10px]" onclick="decreaseQuantityFuncaddToCartt()">-</button>
-      <button class="p-2 shadow-lg  w-[30%] bg-white rounded-lg  text-black mx-[10px]" onclick="increaseQuantityFuncaddToCartt()">+</button>
+      <button  class="transition duration-1000  hover:bg-gray-500 hover:text-white p-2 shadow-lg  w-[30%] bg-white rounded-lg  text-black mx-[10px]" onclick="decreaseQuantityFuncaddToCartt()">-</button>
+      <button class="transition duration-1000  hover:bg-gray-500 hover:text-white p-2 shadow-lg  w-[30%] bg-white rounded-lg  text-black mx-[10px]" onclick="increaseQuantityFuncaddToCartt()">+</button>
    </div>
    <button onclick="addToCarttUpdate()"
    class=" mb-[10px] w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg transition duration-400">
@@ -854,7 +850,7 @@ if( document.getElementById('product-detail')){
 </button>
 
   <button onclick="addToCartt()"
-     class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg transition duration-400">
+     class=" w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg transition duration-400">
      Add to Cart
   </button>
 </div>
@@ -960,21 +956,30 @@ function addToCartt(){
    }))
    }
 
-  // if(document.getElementById('addMenClothToCartEl')){
-  //   console.log(document.getElementById('addelEctronicsToCartEl'));
-  //   document.getElementById('addMenClothToCartEl').addEventListener('click', checkarryToastFun)
-  //   document.getElementById('addeljeweleryToCartEl').addEventListener('click', checkarryToastFun)
-  //   document.getElementById('addelEctronicsToCartEl').addEventListener('click', checkarryToastFun)
-  // // }
-  //  function checkarryToastFun(){
-  //    let showSnackbar = document.getElementById("snackbar");
-  //    console.log(showSnackbar);
-
-  //     showSnackbar.className = "show";
-
-  //     setTimeout(function(){ showSnackbar.className = showSnackbar.className.replace("show", ""); }, 3000);
-   
-
-  // }
+   function feedBackFunc(){
+    document.getElementById('feedBackPop').classList.remove('hidden')
+   }
 
 
+document.getElementById('CancelRequest').addEventListener('click', (()=>{
+  document.getElementById('feedBackPop').classList.add('hidden')
+
+}))
+
+document.getElementById('confirmRequest').addEventListener('click', (()=>{
+  document.getElementById('feedBackPop').classList.add('hidden')
+  document.getElementById('feedBackMessage').innerHTML =`
+    
+  <h2 class="text-xl font-semibold text-gray-800 mb-4">Are you sure?</h2>
+  <p class="text-gray-600 mb-6">Congratulation you have successfully purchace this product </p>
+  <p>you are charge $${taxtCost.toFixed(0)} for this product </p>
+  `
+  document.getElementById('ConfirmfeedBackPop').classList.remove('hidden')
+  setTimeout(()=>{
+    timerOut()
+  },3000)
+}))
+
+function timerOut() {
+  document.getElementById('ConfirmfeedBackPop').classList.add('hidden')
+}
