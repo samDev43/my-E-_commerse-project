@@ -977,7 +977,9 @@ document.getElementById('confirmRequest').addEventListener('click', (()=>{
   document.getElementById('ConfirmfeedBackPop').classList.remove('hidden')
   setTimeout(()=>{
     timerOut()
+    location.href='https://samdev43.github.io/my-E-_commerse-project/index.html'
   },3000)
+
 }))
 
 function timerOut() {
