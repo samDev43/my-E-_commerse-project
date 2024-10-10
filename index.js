@@ -1,292 +1,3 @@
-//  const productList = [
-//     {
-//       id: 1,
-//       productName: "Unleashed",
-//       productPrice: 24.0,
-//       quantityAvailable: 100,
-//       imageURL:
-//         "https://productimages.hepsiburada.net/l/36/600-800/10531719315506.jpg",
-//       subImages: [
-//         "https://static.wixstatic.com/media/107c0e_e10ba2267bb0433da110b1ad68c1ad9a~mv2.jpeg/v1/fill/w_816,h_816,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/107c0e_e10ba2267bb0433da110b1ad68c1ad9a~mv2.jpeg",
-//         ,
-//         "https://productimages.hepsiburada.net/l/42/600-800/10733441515570.jpg",
-//       ],
-//       description:
-//         "An all-rounder body butter crafted with nourishing cold-pressed nut-butters, carrier oils, and essential oils.",
-//       scents: [
-//         "Shea Berry Melon",
-//         "Summer Rain",
-//         "Rose Petal",
-//         "Unleashed",
-//         "Coolmint",
-//         "Lavender",
-//       ],
-//       keyIngredients: [
-//         {
-//           name: "Shea Butter",
-//           description:
-//             "Shea butter provides hydration and helps repair damaged skin cells.",
-//         },
-//         {
-//           name: "Mango Butter",
-//           description: "Improves skin elasticity and promotes rejuvenation.",
-//         },
-//       ],
-//       benefitsAndUses: [
-//         {
-//           name: "Deep Nourishment",
-//           description:
-//             "Provides deep nourishment and helps maintain optimal moisture for skin and hair.",
-//         },
-//       ],
-//     },
-//     {
-//       id: 2,
-//       productName: "Summer Rain",
-//       productPrice: 22.0,
-//       quantityAvailable: 80,
-//       imageURL:
-//         "https://images.hugoboss.com/is/image/boss/hbeu50436399_001_350?wid=768&qlt=80",
-//       subImages: [
-//         "https://productimages.hepsiburada.net/l/36/600-800/10531719315506.jpg",
-//         "https://productimages.hepsiburada.net/l/35/1000/10473224536114.jpg",
-//       ],
-//       description:
-//         "A refreshing blend of essential oils, perfect for summer hydration.",
-//       scents: ["Summer Rain", "Shea Berry Melon", "Lavender"],
-//       keyIngredients: [
-//         {
-//           name: "Coconut Oil",
-//           description: "Locks in moisture for all-day hydration.",
-//         },
-//         {
-//           name: "Almond Oil",
-//           description: "Rich in vitamins that improve skin texture.",
-//         },
-//       ],
-//       benefitsAndUses: [
-//         {
-//           name: "Soothing Hydration",
-//           description: "Provides a cooling effect and calms irritated skin.",
-//         },
-//       ],
-//     },
-//     {
-//       id: 3,
-//       productName: "Lavender Bliss",
-//       productPrice: 26.0,
-//       quantityAvailable: 120,
-//       imageURL:
-//         "https://productimages.hepsiburada.net/l/37/1000/10550756540466.jpg",
-//       subImages: [
-//         "https://images.hugoboss.com/is/image/boss/hbeu50436399_001_350?wid=768&qlt=80",
-//         "https://images.hugoboss.com/is/image/boss/hbeu50436399_001_350?wid=768&qlt=80",
-//       ],
-//       description:
-//         "A calming lavender scent perfect for relaxing and soothing your skin.",
-//       scents: ["Lavender", "Rose Petal", "Coolmint"],
-//       keyIngredients: [
-//         {
-//           name: "Lavender Oil",
-//           description: "Reduces stress and promotes relaxation.",
-//         },
-//         {
-//           name: "Jojoba Oil",
-//           description: "Helps control excess oil and balances skin moisture.",
-//         },
-//       ],
-//       benefitsAndUses: [
-//         {
-//           name: "Calming Effect",
-//           description:
-//             "Relieves stress and provides gentle hydration to the skin.",
-//         },
-//       ],
-//     },
-//     {
-  //       id: 4,
-  //       productName: "Shea Berry Melon",
-  //       productPrice: 25.0,
-//       quantityAvailable: 90,
-//       imageURL:
-//         "https://productimages.hepsiburada.net/l/35/1000/10473224536114.jpg",
-//       subImages: [
-  //         "https://productimages.hepsiburada.net/l/41/1000/10709642149938.jpg",
-//         "https://productimages.hepsiburada.net/l/41/1000/10709642149938.jpg",
-//       ],
-//       description:
-//         "A fruity and fresh body butter enriched with natural extracts for a rejuvenating experience.",
-//       scents: ["Shea Berry Melon", "Lavender", "Summer Rain"],
-//       keyIngredients: [
-//         {
-//           name: "Berry Extract",
-//           description: "Packed with antioxidants that promote skin health.",
-//         },
-//         {
-//           name: "Melon Oil",
-//           description: "Moisturizes and improves skin elasticity.",
-//         },
-//       ],
-//       benefitsAndUses: [
-//         {
-//           name: "Skin Rejuvenation",
-//           description: "Promotes skin cell regeneration and improves elasticity.",
-//         },
-//       ],
-//     },
-//     {
-//       id: 5,
-//       productName: "Coolmint",
-//       productPrice: 23.0,
-//       quantityAvailable: 110,
-//       imageURL:
-//         "https://productimages.hepsiburada.net/l/41/1000/10709642149938.jpg",
-//       subImages: [
-//         "https://productimages.hepsiburada.net/l/35/1000/10473224536114.jpg",
-//         "https://productimages.hepsiburada.net/s/22/500/9953271382066.jpg",
-//       ],
-//       description:
-//         "A minty fresh body butter that provides a refreshing cooling sensation to your skin.",
-//       scents: ["Coolmint", "Lavender", "Shea Berry Melon"],
-//       keyIngredients: [
-//         {
-//           name: "Peppermint Oil",
-//           description: "Provides a cooling sensation and soothes irritated skin.",
-//         },
-//         {
-  //           name: "Tea Tree Oil",
-//           description: "Fights acne and promotes clearer skin.",
-//         },
-//       ],
-//       benefitsAndUses: [
-  //         {
-//           name: "Cooling Sensation",
-//           description:
-//             "Cools the skin and provides relief from irritation and inflammation.",
-//         },
-//       ],
-//     },
-//     {
-  //       id: 6,
-//       productName: "Rose Petal",
-//       productPrice: 28.0,
-//       quantityAvailable: 75,
-//       imageURL:
-//         "https://productimages.hepsiburada.net/l/42/600-800/10733441515570.jpg",
-//       subImages: [
-  //         "https://productimages.hepsiburada.net/s/22/1500/9949777100850.jpg",
-//         "https://productimages.hepsiburada.net/s/38/1500/10583086202930.jpg",
-//       ],
-//       description:
-//         "Infused with rose petals and essential oils for luxurious hydration.",
-//       scents: ["Rose Petal", "Lavender", "Unleashed"],
-//       keyIngredients: [
-  //         {
-    //           name: "Rose Oil",
-    //           description: "Softens skin and improves its texture.",
-//         },
-//         {
-//           name: "Grapeseed Oil",
-//           description: "Rich in antioxidants and promotes skin health.",
-//         },
-//       ],
-//       benefitsAndUses: [
-  //         {
-    //           name: "Luxurious Hydration",
-    //           description: "Leaves skin feeling soft, smooth, and nourished.",
-//         },
-//       ],
-//     },
-//     {
-//       id: 7,
-//       productName: "Citrus Splash",
-//       productPrice: 24.0,
-//       quantityAvailable: 130,
-//       imageURL:
-//         "https://productimages.hepsiburada.net/s/3/1500/9593922158642.jpg",
-//       subImages: [
-//         "https://productimages.hepsiburada.net/s/21/1500/9933056540722.jpg",
-//         "https://productimages.hepsiburada.net/s/22/1500/9949777100850.jpg",
-//       ],
-//       description: "A zesty citrus blend that energizes and refreshes your skin.",
-//       scents: ["Citrus Splash", "Summer Rain", "Coolmint"],
-//       keyIngredients: [
-//         {
-  //           name: "Orange Oil",
-  //           description: "Brightens skin and reduces blemishes.",
-  //         },
-  //         {
-    //           name: "Lemon Oil",
-//           description: "Energizes the skin and promotes a glowing complexion.",
-//         },
-//       ],
-//     //   benefitsAndUse…
-//     }]
-
-// let products =[
-  //     {
-    //         image:'images/6-piece-white-dinner-plate-set.jpg',
-    //         description:'',
-//         price:''
-//       },
-//       {
-  //         image:'images/adults-plain-cotton-tshirt-2-pack-teal.jpg',
-//         description:'',
-//         price:''
-//     },
-//     {
-//         image:'images/athletic-cotton-socks-6-pairs.jpg',
-//         description:'',
-//         price:''
-//       },
-//       {
-//         image:'images/backpack.jpg',
-//         description:'',
-//         price:''
-//     },
-//     {
-//       image:'images/bathroom-rug.jpg',
-//         description:'',
-//         price:''
-//     },
-//     {
-//         image:'images/blackout-curtains-black.jpg',
-//         description:'',
-//         price:''
-//       },
-//       {
-//         image:'images/coffeemaker-with-glass-carafe-black.jpg',
-//         description:'',
-//         price:''
-//     },
-//     {
-  //         image:'images/countertop-blender-64-oz.jpg',
-//         description:'',
-//         price:''
-//       },
-//     {
-  //       image:'images/double-elongated-twist-french-wire-earrings.webp',
-//         description:'',
-//         price:''
-//       },
-//     {
-//       image:'images/electric-glass-and-steel-hot-water-kettle.webp',
-//       description:'',
-//       price:''
-//     },
-//     {
-  //       image:'images/men-chino-pants-beige.jpg',
-  //       description:'',
-  //       price:''
-//     },
-//     {
-//       image:'images/men-cozy-fleece-zip-up-hoodie-red.jpg',
-//       description:'',
-//       price:''
-//     },
-    
-//   ];
-
   let dataElectronics= []
   let dataJewelry = []
   let dataMenCloth = []
@@ -303,48 +14,7 @@ function saveCustumerProductChose(){
 
 let display_productsNumber = 0;
 
-// console.log(document.getElementById('display_products'))
 
-// function displayProduct(display){
-  
-//   let display_products = document.getElementById('display_products')
-//    if( document.getElementById('display_products')){
-//     display_products.innerHTML = '';
-//     console.log(display.length > 0);
-//     if(display.length > 0){
-//       display.forEach((product, i)=>{
-  //           display_products.innerHTML +=  `
-  //           <div class="border bg-white border-gray-300 border-1 p-[10px] rounded flex flex-col justify-between">
-  //           <div>
-  //             <div class="h-[17rem]" onclick="viewProductIfo(${i})"> <img class="w-full h-full" src="${product.imageURL}" alt=""></div>
-  //             <p class="font-bold my-[7px]">${product.productName}</p>
-  //          <p class="font-bold"> prise: $${product.productPrice}</p>
-  //             <select class="m-[5px] p-[3px] rounded-lg productCount " name="productCount-${i}" id="">
-  //                 <option value="1">1</option>
-  //                 <option value="2">2</option>
-  //                 <option value="3">3</option>
-  //                 <option value="4">4</option>
-  //                 <option value="5">5</option>
-  //                 <option value="6">6</option>
-  //                 <option value="7">7</option>
-  //                 <option value="8">8</option>
-//                 <option value="9">9</option>
-//                 <option value="10">10</option>
-//             </select>
-//           </div>
-//              <div><button   onclick="addToCart(${i})" class="my-[30px] w-full m-auto bg-yellow-500 hover:bg-yellow-600 rounded-lg py-[5px] text-white addToCartBtns">add to cart</button></div>
-//          </div>
-//           `
-//       })
-//      }
-//      else{
-//       console.log(display_products.innerHTML);
-//       display_products.innerHTML = `<p class="text-white font-bold text-2xl">No product found</p>`
-//     }
-//     }
-    
-// }
-// displayProduct(productList)
 
 function displayElectronic(dataElectronicsParm){
   display_productsElectonics.innerHTML = '';
@@ -355,9 +25,9 @@ function displayElectronic(dataElectronicsParm){
     let {price,image,title} =product
     // console.log(price,product);
     display_productsElectonics.innerHTML +=  `
-    <div class="border bg-white border-gray-300 border-1 p-[10px] rounded flex flex-col justify-between">
+    <div class=" border bg-white border-gray-300 border-1 p-[10px] rounded flex flex-col justify-between">
     <div>
-      <div class="h-[17rem]" onclick="viewProductIfoElectronics(${i})"> <img class="w-full h-full" src="${image}" alt=""></div>
+      <div class="h-[17rem]" onclick="viewProductIfoElectronics(${i})"> <img class="w-full h-full cursor-pointer" src="${image}" alt=""></div>
       <p class="font-bold my-[7px]">${title}</p>
    <p class="font-bold"> prise: $${price}</p>
       <select class="m-[5px] p-[3px] rounded-lg productCount " name="productCountElectronics-${i}" id="">
@@ -418,7 +88,7 @@ function displayJewelery(dataJewelryParam){
       display_productsJewelery.innerHTML +=  `
       <div class="border bg-white border-gray-300 border-1 p-[10px] rounded flex flex-col justify-between">
       <div>
-        <div class="h-[17rem]" onclick="viewProductIfoJewelery(${i})"> <img class="w-full h-full" src="${image}" alt=""></div>
+        <div class="h-[17rem]" onclick="viewProductIfoJewelery(${i})"> <img class="w-full h-full cursor-pointer " src="${image}" alt=""></div>
         <p class="font-bold my-[7px]">${title}</p>
      <p class="font-bold"> prise: $${price}</p>
         <select class="m-[5px] p-[3px] rounded-lg productCount " name="productCountJewelery-${i}" id="">
@@ -444,9 +114,12 @@ function displayJewelery(dataJewelryParam){
 async function moreProductJewelery(){
 
   if(document.getElementById('display_productsJewelery')){
+    
     try{
+      spinnerEl.classList.remove('hidden')
       let res = await fetch('https://fakestoreapi.com/products/category/jewelery')
       dataJewelry = await res.json()
+      spinnerEl.classList.add('hidden')
     displayJewelery(dataJewelry)
   }catch(error){
     console.log(error);
@@ -483,9 +156,9 @@ function displayMensProduct(dataMenClothParam){
       console.log();
       // console.log(price,product);
       display_productMenCloth.innerHTML +=  `
-      <div class="border bg-white border-gray-300 border-1 p-[10px] rounded flex flex-col justify-between">
+      <div class=" border bg-white border-gray-300 border-1 p-[10px] rounded flex flex-col justify-between">
       <div>
-        <div class="h-[17rem]" onclick="viewProductIfoMenCloth(${i})"> <img class="w-full h-full" src="${image}" alt=""></div>
+        <div class="h-[17rem]" onclick="viewProductIfoMenCloth(${i})"> <img class="w-full h-full cursor-pointer" src="${image}" alt=""></div>
         <p class="font-bold my-[7px]">${title}</p>
      <p class="font-bold"> prise: $${price}</p>
         <select class="m-[5px] p-[3px] rounded-lg productCount " name="productCountMenCloth-${i}" id="">
@@ -512,8 +185,10 @@ function displayMensProduct(dataMenClothParam){
 }
 async function moreProductMenCloth(){
   if(document.getElementById('display_productMenCloth')){
+    spinnerEl.classList.remove('hidden')
     try{
     let res = await fetch("https://fakestoreapi.com/products/category/men's clothing")
+    spinnerEl.classList.add('hidden')
     dataMenCloth = await res.json()
     // let display_products = document.getElementById('display_products')
     displayMensProduct(dataMenCloth)
@@ -626,8 +301,8 @@ countProduct()
 
  
 moveToCartDisplay=()=>{
-    window.location.href = 'https://samdev43.github.io/my-E-_commerse-project/cart.html';
-    // window.location.href = 'http://127.0.0.1:5500/cart.html'
+    // window.location.href = 'https://samdev43.github.io/my-E-_commerse-project/cart.html';
+    window.location.href = 'http://127.0.0.1:5500/cart.html'
 
 }
 
@@ -739,8 +414,8 @@ function decreaseQuantityFunc(index){
 }
 if(document.querySelector('.toHomePage1')){
     document.querySelector('.toHomePage1').addEventListener('click', ()=>{
-        window.location.href= 'http://samdev43.github.io/my-E-_commerse-project/index.html'
-        // window.location.href= 'http://127.0.0.1:5500/index.html'
+        // window.location.href= 'http://samdev43.github.io/my-E-_commerse-project/index.html'
+        window.location.href= 'http://127.0.0.1:5500/index.html'
     })
 }
 
@@ -787,8 +462,8 @@ function viewProductIfoElectronics(i){
   console.log(i);
    console.log(dataElectronics);
    localStorage.setItem('checkOutProduct', JSON.stringify(dataElectronics[i]))
-   location.href = `http://samdev43.github.io/my-E-_commerse-project/prduct_discription.html`              
-  //  location.href=`http://127.0.0.1:5500/prduct_discription.html`
+  //  location.href = `http://samdev43.github.io/my-E-_commerse-project/prduct_discription.html`              
+   location.href=`http://127.0.0.1:5500/prduct_discription.html`
   
 }
 
@@ -797,8 +472,8 @@ function viewProductIfoJewelery(i){
   console.log(i);
    console.log(dataJewelry);
    localStorage.setItem('checkOutProduct', JSON.stringify(dataJewelry[i]))
-   location.href = `http://samdev43.github.io/my-E-_commerse-project/prduct_discription.html`              
-  //  location.href=`http://127.0.0.1:5500/prduct_discription.html`
+  //  location.href = `http://samdev43.github.io/my-E-_commerse-project/prduct_discription.html`              
+   location.href=`http://127.0.0.1:5500/prduct_discription.html`
   
 }
 
@@ -806,8 +481,8 @@ function viewProductIfoMenCloth(i){
   // moreProductMenCloth()
    console.log(dataMenCloth);
    localStorage.setItem('checkOutProduct', JSON.stringify(dataMenCloth[i]))
-   location.href = `http://samdev43.github.io/my-E-_commerse-project/prduct_discription.html`              
-  //  location.href=`http://127.0.0.1:5500/prduct_discription.html`
+  //  location.href = `http://samdev43.github.io/my-E-_commerse-project/prduct_discription.html`              
+   location.href=`http://127.0.0.1:5500/prduct_discription.html`
   
 }
 
@@ -938,21 +613,21 @@ function addToCartt(){
     countProduct() 
   }
     saveCustumerProductChose();
-  location.href= `http://samdev43.github.io/my-E-_commerse-project/index.html`
-  // location.href=`http://127.0.0.1:5500/index.html`
+  // location.href= `http://samdev43.github.io/my-E-_commerse-project/index.html`
+  location.href=`http://127.0.0.1:5500/index.html`
   
    }
 
    if(document.getElementById('toHomePage2')){
 
    toHomePage2.addEventListener('click', (()=>{
-    location.href = `http://samdev43.github.io/my-E-_commerse-project/index.html`
-    // location.href = `http://127.0.0.1:5500/index.html`
+    // location.href = `http://samdev43.github.io/my-E-_commerse-project/index.html`
+    location.href = `http://127.0.0.1:5500/index.html`
    }))
 
    toCartPage2.addEventListener('click', (()=>{
-    location.href = `http://samdev43.github.io/my-E-_commerse-project/cart.html`
-    // location.href = `http://127.0.0.1:5500/cart.html`
+    // location.href = `http://samdev43.github.io/my-E-_commerse-project/cart.html`
+    location.href = `http://127.0.0.1:5500/cart.html`
    }))
    }
 
@@ -960,11 +635,14 @@ function addToCartt(){
     document.getElementById('feedBackPop').classList.remove('hidden')
    }
 
+if(document.getElementById('CancelRequest')){
 
 document.getElementById('CancelRequest').addEventListener('click', (()=>{
   document.getElementById('feedBackPop').classList.add('hidden')
 
 }))
+}
+if(document.getElementById('confirmRequest')){
 
 document.getElementById('confirmRequest').addEventListener('click', (()=>{
   document.getElementById('feedBackPop').classList.add('hidden')
@@ -977,11 +655,72 @@ document.getElementById('confirmRequest').addEventListener('click', (()=>{
   document.getElementById('ConfirmfeedBackPop').classList.remove('hidden')
   setTimeout(()=>{
     timerOut()
-    location.href='https://samdev43.github.io/my-E-_commerse-project/index.html'
+    // location.href='https://samdev43.github.io/my-E-_commerse-project/index.html'
+    location.href='http://127.0.0.1:5500/index.html'
+    customerProductChose=[]
+    saveCustumerProductChose()
   },3000)
 
 }))
+}
 
 function timerOut() {
   document.getElementById('ConfirmfeedBackPop').classList.add('hidden')
 }
+
+if(document.getElementById('dropdownButton')){
+
+document.addEventListener('DOMContentLoaded', function () {
+  const dropdownButton = document.getElementById('dropdownButton');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+
+  // Toggle dropdown on button click
+  dropdownButton.addEventListener('click', function () {
+      dropdownMenu.classList.toggle('hidden');
+  });
+
+  // Close the dropdown if clicked outside
+  window.addEventListener('click', function (e) {
+      if (!dropdownButton.contains(e.target)) {
+          dropdownMenu.classList.add('hidden');
+      }
+  });
+});
+}
+
+// if(document.getElementById('navigateToAll')){
+  let navigateToAll = document.getElementById('navigateToAll')
+  let navigateToAlElectonics = document.getElementById('navigateToAlElectonics')
+  let navigateToAlMen = document.getElementById('navigateToAlMens')
+  let navigateToJewelery= document.getElementById('navigateToJewelery')
+  console.log(navigateToAlMen,document.getElementById('navigateToAlMens'),document.getElementById('navigateToJewelery'),document.getElementById('navigateToAlElectonics'));
+ if(navigateToAll){
+  navigateToAll.addEventListener('click',(()=>{
+    // location.href='https://samdev43.github.io/my-E-_commerse-project/index.html'
+    location.href='http://127.0.0.1:5500/index.html'
+}))
+ }
+ if(navigateToAlMen){
+  navigateToAlMen.addEventListener('click', function(){
+    console.log('men');
+     // location.href='https://samdev43.github.io/my-E-_commerse-project/men's_Product.html'
+    location.href=`http://127.0.0.1:5500/men's_Product.html`
+  })
+ }
+ if(navigateToAlElectonics){
+  console.log(navigateToAlElectonics);
+  navigateToAlElectonics.addEventListener('click',(()=>{
+    console.log('electronics');
+     // location.href='https://samdev43.github.io/my-E-_commerse-project/electronics.html'
+    location.href=`http://127.0.0.1:5500/electronics.html`
+
+  }))
+ }
+  if(navigateToJewelery){
+    navigateToJewelery.addEventListener('click',(()=>{
+      console.log('jewelery');
+       // location.href='https://samdev43.github.io/my-E-_commerse-project/Jewelery-product.html'
+      location.href=`http://127.0.0.1:5500/Jewelery-product.html`
+    }))
+  }
+// }
