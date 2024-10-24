@@ -17,9 +17,13 @@ let display_productsNumber = 0;
 
 
 function displayElectronic(dataElectronicsParm){
-  display_productsElectonics.innerHTML = '';
+  if(document.getElementById('display_productsElectonics')){
+    console.log(dataElectronicsParm);
+    console.log(dataElectronicsParm);
+    display_productsElectonics.innerHTML = '';
+  }
   if(dataElectronicsParm.length === 0){
-    display_productsElectonics.innerHTML = 'no Electonics product found'
+    // display_productsElectonics.innerHTML = 'no Electonics product found'
   }else
   dataElectronicsParm.forEach((product, i)=>{
     let {price,image,title} =product
@@ -79,7 +83,9 @@ async function moreProductElectronics(){
   }
 
 function displayJewelery(dataJewelryParam){
+ if(document.getElementById('display_productsJewelery)')){
   display_productsJewelery.innerHTML = '';
+ }
   if(dataJewelryParam.length == 0){
     display_productsJewelery.innerHTML = 'no jewelery product found'
   }else{
@@ -369,13 +375,18 @@ delFunc=(i)=>{
 if(document.getElementById('searchINP')){
 
   searchINP.addEventListener('input', (()=>{
-    console.log(searchINP.value)
    searchElectronicsProduct = dataElectronics.filter((check => check.title.toLocaleLowerCase().includes(searchINP.value.toLocaleLowerCase())));
    searchdataJewelryProduct = dataJewelry.filter((check => check.title.toLocaleLowerCase().includes(searchINP.value.toLocaleLowerCase())));
    searchdataMenClothProduct = dataMenCloth.filter((check => check.title.toLocaleLowerCase().includes(searchINP.value.toLocaleLowerCase())));
-   displayElectronic(searchElectronicsProduct)
-   displayJewelery(searchdataJewelryProduct)
-   displayMensProduct(searchdataMenClothProduct)
+    if(document.getElementById('display_productsElectonics')){
+      displayElectronic(searchElectronicsProduct)
+    }
+    if(document.getElementById('display_productsJewelery')){
+      displayJewelery(searchdataJewelryProduct)
+    }  
+    if(document.getElementById('display_productMenCloth')){
+      displayMensProduct(searchdataMenClothProduct)
+    }
    console.log(searchElectronicsProduct, searchdataJewelryProduct ,searchdataMenClothProduct);
   }))
 }
@@ -463,7 +474,7 @@ function viewProductIfoElectronics(i){
    console.log(dataElectronics);
    localStorage.setItem('checkOutProduct', JSON.stringify(dataElectronics[i]))
    location.href = `http://samdev43.github.io/my-E-_commerse-project/prduct_discription.html`              
-  //  location.href=`http://127.0.0.1:5500/prduct_discription.html`
+  //  location.href=`http://127.0.0.1:5500/prduct_addToCarttUpdatediscription.html`
   
 }
 
@@ -693,7 +704,6 @@ document.addEventListener('DOMContentLoaded', function () {
   let navigateToAlElectonics = document.getElementById('navigateToAlElectonics')
   let navigateToAlMen = document.getElementById('navigateToAlMens')
   let navigateToJewelery= document.getElementById('navigateToJewelery')
-  console.log(navigateToAlMen,document.getElementById('navigateToAlMens'),document.getElementById('navigateToJewelery'),document.getElementById('navigateToAlElectonics'));
  if(navigateToAll){
   navigateToAll.addEventListener('click',(()=>{
     location.href='https://samdev43.github.io/my-E-_commerse-project/index.html'
@@ -702,18 +712,15 @@ document.addEventListener('DOMContentLoaded', function () {
  }
  if(navigateToAlMen){
   navigateToAlMen.addEventListener('click', function(){
-    console.log('men');
      location.href='https://samdev43.github.io/my-E-_commerse-project/mens_Product.html'
     // location.href=`http://127.0.0.1:5500/men's_Product.html`
   })
  }
  if(navigateToAlElectonics){
-  console.log(navigateToAlElectonics);
   navigateToAlElectonics.addEventListener('click',(()=>{
     console.log('electronics');
      location.href='https://samdev43.github.io/my-E-_commerse-project/electronics.html'
     // location.href=`http://127.0.0.1:5500/electronics.html`
-
   }))
  }
   if(navigateToJewelery){
